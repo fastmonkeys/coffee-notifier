@@ -46,7 +46,7 @@ while True:
         coffee_level = now
         incoming_coffee = COFFEE_READY
         cups_of_coffee = int(round(now * 10))
-        inbox.post('Barista', 'teemu+barista@fastmonkeys.com', 'Coffee is ready!', '<p>%s</p>' % (':coffee:' * cups_of_coffee), tags='@team')
+        inbox.post('Barista', 'teemu+barista@fastmonkeys.com', 'Coffee is ready!', '<p>%s</p>' % (':coffee:' * cups_of_coffee))  # , tags='@team'
     elif incoming_coffee == COFFEE_READY and now <= 0.1:
         incoming_coffee = COFFEE_NO
         inbox.post('Barista', 'teemu+barista@fastmonkeys.com', 'Out of coffee', '<p></p>')
