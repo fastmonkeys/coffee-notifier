@@ -14,7 +14,7 @@ COFFEE_URL = os.environ.get('COFFEE_URL', 'http://192.168.179.80:8080/')
 USE_SAMPLE_DATA = bool(int(os.environ.get('USE_SAMPLE_DATA', 1)))
 
 def normalize(x):
-    return min(1, float(x) / 65)
+    return min(1, float(x) / 100)
 
 if not FLOWDOCK_API_KEY:
     print('FLOWDOCK_API_KEY not set, using simulated team box...')
