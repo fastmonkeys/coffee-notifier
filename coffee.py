@@ -15,7 +15,7 @@ def normalize(x):
 if SIMULATION:
     class DummyTeamInbox(object):
         def post(self, *args, **kwargs):
-            print "POST:", args, kwargs
+            print('POST:', args, kwargs)
     inbox = DummyTeamInbox()
 else:
     inbox = TeamInbox(FLOWDOCK_API_KEY)
@@ -30,7 +30,7 @@ i = 4
 while True:
     i += 1
     if SIMULATION:
-        coffee_levels = map(normalize, [int(x.strip()) for x in open('sample_data.txt').readlines()])[0:i]
+        coffee_levels = list(map(normalize, [int(x.strip()) for x in open('sample_data.txt').readlines()]))[0:i]
     else:
         req = requests.get(COFFEE_URL)
         coffee_levels = map(normalize, map(int, re.findall('([0-9]+)<', req.content)))
@@ -39,7 +39,7 @@ while True:
     diff1 = coffee_levels[-1] - coffee_levels[-2]
     diff2 = coffee_levels[-2] - coffee_levels[-3]
 
-    print i, now, diff1, diff2
+    print(i, now, diff1, diff2)
     if diff1 >= 0.05 and diff2 >= 0.05:
         incoming_coffee = COFFEE_COMING
     elif incoming_coffee == COFFEE_COMING and abs(diff1) < 0.05:

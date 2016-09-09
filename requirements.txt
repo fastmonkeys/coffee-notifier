@@ -1,0 +1,2 @@
+pyflowdock==0.3.35
+requests==2.11.1
