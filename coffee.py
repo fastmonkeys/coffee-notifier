@@ -1,8 +1,8 @@
-import requests
-import time
-import re
-import pdb
 import os
+import re
+import time
+
+import requests
 from flowdock import TeamInbox
 
 FLOWDOCK_API_KEY = os.environ.get('FLOWDOCK_API_KEY')
