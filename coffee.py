@@ -63,8 +63,9 @@ while True:
             'Barista',
             'teemu+barista@fastmonkeys.com',
             'Coffee is ready!',
-            '<p>%s</p>' % ('☕ ' * cups_of_coffee)
-        )  # , tags='@team'
+            '<p>%s</p>' % ('☕ ' * cups_of_coffee),
+            tags='@team'
+        )
     elif incoming_coffee == COFFEE_READY and now <= 0.1:
         incoming_coffee = COFFEE_NO
         inbox.post(
