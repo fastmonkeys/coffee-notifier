@@ -7,6 +7,6 @@ Analyses data from `coffee-watch` and reports to Flowdock when there is coffee
 ````bash
 pip install -r requirements.txt
 export FLOWDOCK_API_KEY=YOUR_API_KEY_HERE
-export SIMULATION=0
+export USE_SAMPLE_DATA=0
 python coffee.py
 ````

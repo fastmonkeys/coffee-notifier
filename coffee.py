@@ -8,7 +8,7 @@ from flowdock import TeamInbox
 
 FLOWDOCK_API_KEY = os.environ.get('FLOWDOCK_API_KEY')
 COFFEE_URL = os.environ.get('COFFEE_URL', 'http://192.168.179.80:8080/')
-USE_SAMPLE_DATA = bool(os.environ.get('USE_SAMPLE_DATA', True))
+USE_SAMPLE_DATA = bool(int(os.environ.get('USE_SAMPLE_DATA', 1)))
 
 def normalize(x):
     return min(1, float(x) / 65)
