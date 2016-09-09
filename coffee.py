@@ -1,3 +1,6 @@
+# coding: utf-8
+from __future__ import print_function
+
 import os
 import re
 import sys
@@ -60,7 +63,7 @@ while True:
             'Barista',
             'teemu+barista@fastmonkeys.com',
             'Coffee is ready!',
-            '<p>%s</p>' % (':coffee: ' * cups_of_coffee)
+            '<p>%s</p>' % ('☕ ' * cups_of_coffee)
         )  # , tags='@team'
     elif incoming_coffee == COFFEE_READY and now <= 0.1:
         incoming_coffee = COFFEE_NO
@@ -82,7 +85,7 @@ while True:
             'Barista',
             'teemu+barista@fastmonkeys.com',
             'Coffee is consumed',
-            '<p>%s</p>' % (':coffee: ' * cups_of_coffee)
+            '<p>%s</p>' % ('☕ ' * cups_of_coffee)
         )
 
     if USE_SAMPLE_DATA:
